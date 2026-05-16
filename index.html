@@ -1,52 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Happy Birthday Appa</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #dcfffa;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise</title>
 
-        h1 {
-            color: red; /* Pink color */
-            font-size: 48px;
-            font-weight: bold;
-            margin-top: 30px;
-        }
+<style>
 
-        img {
-            width: 250px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.97);
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        p {
-            color: #9200cc;
-            font-size: 24px;
-            margin: 10px;
-            line-height: 1.6;
-            font-weight: bold;
-        }
-    </style>
+/* BODY */
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center;
+    transition:1s;
+}
+
+/* FIRST BACKGROUND */
+
+.first-bg{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),
+    url("fir.jpeg");
+
+    background-size: contain;
+    background-position: center;
+    filter: brightness(90%);
+}
+
+/* SECOND BACKGROUND */
+
+.second-bg{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)),
+    url("Second.jpg.jpeg");
+
+    background-size: contain;
+    background-position: left;
+}
+
+/* CARD */
+
+.card{
+    width:500px;
+    min-height:650px;
+
+    background:rgba(255,255,255,0.92);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* HEADINGS */
+
+h1{
+    color:#ff4d6d;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#222;
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+/* CANDLE */
+
+.candle{
+    font-size:200px;
+
+    cursor:pointer;
+
+    animation: glow 1s infinite alternate;
+}
+
+/* GLOW EFFECT */
+
+@keyframes glow{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+}
+
+/* CLICK TEXT */
+
+.click-text{
+    margin-top:20px;
+    font-size:24px;
+    color:#555;
+}
+
+/* SECOND SCREEN */
+
+.message-box{
+    display:none;
+    animation:fadeIn 1s;
+}
+
+/* FADE ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MESSAGE */
+
+.message{
+    margin-top:20px;
+    font-size:24px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* PHOTOS */
+
+.photos{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+/* PHOTO SIZE */
+
+.photos img{
+
+    width:120px;
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:3px solid pink;
+}
+
+</style>
 </head>
-<body>
 
-    <h1>❤ ಹುಟ್ಟುಹಬ್ಬದ ಶುಭಾಶಯಗಳು ಅಪ್ಪಾ ❤</h1>
+<body class="first-bg">
 
-    <img src="appa.jpg" alt="Happy Birthday Appa">
+<div class="card">
 
-    <p>
-        Wishing you health, happiness, and lots of love 💓 <br>
-        You are my first hero and forever my role model 😍<br>
-        Thank you for your guidance, love, and care 🌼<br>
-        May this year bring you endless joy and peace 🌟<br>
-        We are so lucky to have you in our life 💗 
-    </p>
+    <!-- FIRST SCREEN -->
+
+    <div id="firstPage">
+
+        <h1>Happy Birthday Darling❤️<h1>
+
+        <h2>love you😘<h2>
+
+        <!-- CANDLE -->
+
+        <div class="candle" onclick="openMessage()">
+            🕯️
+        </div>
+
+        <p class="click-text">
+            Click on the candle
+        </p>
+
+    </div>
+
+    <!-- SECOND SCREEN -->
+
+    <div class="message-box" id="messageBox">
+
+        <h1>For You ❤️</h1>
+
+        <p class="message">
+
+            Haaapppyy biiirrthhddaayyy bbbaaabbbyyyy
+            love you so much🫶 my best friend,my wifey,my annoying bitch,
+             slay queen, fashion diva congratulations for having bff like me😉
+            you are very beautiful soul which i only know.
+            lovvvvveeeeeeeeeeeeeeeeee yooouuu sssooooo mmuuccchhh dishuu
+
+        </p>
+
+        <!-- YOUR PHOTOS -->
+
+        <div class="photos">
+
+            <img src="C:\Users\A1\Documents\HTML\ptcr1.jpg.jpeg">
+
+            <img src="C:\Users\A1\Documents\HTML\ptcr2.jpg.jpeg">
+
+            <img src="C:\Users\A1\Documents\HTML\ptcr3.jpg.jpeg">
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* OPEN SECOND PAGE */
+
+function openMessage(){
+
+    document.getElementById("firstPage").style.display = "none";
+
+    document.getElementById("messageBox").style.display = "block";
+
+    /* CHANGE BACKGROUND */
+
+    document.body.classList.remove("first-bg");
+
+    document.body.classList.add("second-bg");
+}
+
+</script>
 
 </body>
 </html>
